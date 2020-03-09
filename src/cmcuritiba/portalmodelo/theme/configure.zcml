@@ -7,4 +7,17 @@
   <include package="plone.app.themingplugins" />
   <include package="plone.resource" />
 
+  <include file="themes.zcml" />
+
+  <genericsetup:registerProfile
+      name="default"
+      title="Portal da Camara Municipal de Curitiba"
+      directory="profiles/default"
+      description=""
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      post_handler=".setuphandlers.post_install"
+      i18n:attributes="title; description"
+      />
+
+
 </configure>
