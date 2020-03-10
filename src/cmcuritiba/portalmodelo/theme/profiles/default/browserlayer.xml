@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<layers>
-  <layer
-      name="cmcuritiba.portalmodelo.theme"
-      interface="cmcuritiba.portalmodelo.theme.interfaces.IBrowserLayer"
-      />
-</layers>

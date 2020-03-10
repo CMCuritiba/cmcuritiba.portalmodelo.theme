@@ -1,12 +1,9 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
-    xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:five="http://namespaces.zope.org/five"
-    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:i18n="http://namespaces.zope.org/i18n"
-    i18n_domain="sciencepro.portal">
-
-  <five:registerPackage package="." />
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="cmcuritiba.portalmodelo.theme">
 
   <include file="themes.zcml" />
 
@@ -16,9 +13,6 @@
       directory="profiles/default"
       description=""
       provides="Products.GenericSetup.interfaces.EXTENSION"
-      post_handler=".setuphandlers.post_install"
-      i18n:attributes="title; description"
       />
-
 
 </configure>
