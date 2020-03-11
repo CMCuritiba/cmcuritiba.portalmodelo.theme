@@ -9,7 +9,7 @@ module.exports = makeConfig(
   'cmcuritibatema',
 
   //path
-  `${__dirname}/../src/cmcuritiba/portalmodelo/theme`,
+  `${__dirname}/../src/cmcuritiba/portalmodelo/theme/theme/cmcuritiba`,
 
   //publicPath
   '++theme++cmcuritibatema/',
