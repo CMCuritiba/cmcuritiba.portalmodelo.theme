@@ -4,6 +4,6 @@
 
   <include package="plone.resource" />
 
-  <plone:static type="theme" name="cmcuritiba" directory="theme/cmcuritiba" />
+  <plone:static type="theme" name="cmcuritiba" directory="cmcuritiba" />
 
 </configure>
