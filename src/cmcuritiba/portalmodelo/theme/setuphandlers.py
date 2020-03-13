@@ -14,4 +14,3 @@ class HiddenProfiles(object):  # pragma: no cover
 
 def post_install(context):
     """Post install script."""
-

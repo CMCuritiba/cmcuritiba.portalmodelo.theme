@@ -12,7 +12,7 @@ module.exports = makeConfig(
   `${__dirname}/../src/cmcuritiba/portalmodelo/theme/cmcuritiba`,
 
   //publicPath
-  '++theme++cmcuritibatema/',
+  '++theme++cmcuritiba/',
 
   //callback
   function(config, options) {
