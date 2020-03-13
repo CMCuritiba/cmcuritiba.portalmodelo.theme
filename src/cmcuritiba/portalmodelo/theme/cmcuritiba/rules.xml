@@ -7,12 +7,94 @@
   xmlns:str="http://exslt.org/strings"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
+  <theme href="index.html" css:if-content="#visual-portal-wrapper" />
+  <notheme if-path="source_editor.htm" />
   <notheme if-path="@@manage-viewlets" />
   <notheme if-path="ploneimage.htm" />
   <notheme if="$ajax_load" />
-
   <rules css:if-content="#visual-portal-wrapper">
 
+    <!--Head-->
 
+    <merge attributes="id class data-base-url data-portal-url dir" css:content="body" css:theme="body" />
+
+
+    <prepend css:theme="body" css:content="div#barra-identidade" />
+    <copy css:content="html" css:theme="html" attributes="lang dir" />
+    <prepend css:content-children="head" css:theme="head" />
+    <drop css:content="head link[rel='shortcut icon']" />
+    <drop css:content="head link[rel='apple-touch-icon']" />
+    <drop css:content="head meta[name='viewport']" />
+    <drop css:theme="head title" />
+    <drop css:theme="body.userrole-anonymous #portal-personaltools" />
+
+    <!-- logo -->
+    <copy css:content="#portal-logo" css:theme="#logo a" attributes="href title accesskey" />
+
+    <!-- Header -->
+    <replace css:content="#portal-header p" css:theme="#skip-menu" />
+    <replace css:content="#portal-personaltools" css:theme="#user" />
+    <replace css:content-children="#portal-globalnav" css:theme-children=".menu-principal" />
+    <drop css:content=".menu-button" />
+    <drop css:content=".searchSection" />
+    <replace css:content="#portal-searchbox" css:theme="#portal-searchbox" />
+    <drop css:content="#portaltab-index_html" />
+    <replace css:content-children=".coluna-redes" css:theme-children=".navigation-redes" />
+    <replace css:content="#portal-services" css:theme=".links-destaque ul" />
+
+    <!--Content -->
+
+    <replace css:content-children="#portal-breadcrumbs" css:theme-children="#portal-breadcrumbs" method="raw" />
+    <drop css:content="#portal-breadcrumbs" />
+
+    <copy css:content=".relatedItems" css:theme=".conteudo-relacionado" method="raw" />
+    <drop css:content="#content .relatedItems" />
+
+
+    <!-- UL DE LíNGUAS
+    É necessário cadastrar uma action em site_actions com o mesmo id de
+    língua que existe no css, ou seja, no padrão "language-LANGUADE_CODE",
+    para que as regras a seguir funcionem corretamente.-->
+
+    <!--Habilita a div de línguas novamente removendo o hidden, já que encontrou uma action de-->
+    <!--língua renderizada.-->
+    <drop if-content="//ul[@id='portal-siteactions']/li[contains(@id,'siteaction-language-')]" css:theme="#language" attributes="class" />
+
+    <!-- Inglês -->
+    <drop if-not-content="//ul[@id='portal-siteactions']/li[contains(@id,'siteaction-language-en')]" css:theme=".language-en" />
+    <copy attributes="href" css:content="#siteaction-language-en a" css:theme=".language-en a" />
+    <drop css:content="#siteaction-language-en" />
+
+    <!-- Espanhol -->
+    <drop if-not-content="//ul[@id='portal-siteactions']/li[contains(@id,'siteaction-language-es')]" css:theme=".language-es" />
+    <copy attributes="href" css:content="#siteaction-language-es a" css:theme=".language-es a" />
+    <drop css:content="#siteaction-language-es" />
+
+    <!--Se não vier nenhuma action de língua, é necessário remover por completo-->
+    <!--a ul de línguas do tema pois ela estará vazia. -->
+    <drop if-not-content="//ul[@id='portal-siteactions']/li[contains(@id,'siteaction-language-')]" css:theme="ul#language" />
+    <!-- UL DE LíNGUAS -->
+
+    <!--Footer -->
+    <replace css:content-children=".coluna-redes" css:theme-children=".coluna-redes" />
+    <append css:theme="body" css:content="#plone-analytics" />
+
+    <!-- Columns -->
+    <replace css:content-children="#portal-column-content" css:theme-children="#main-content" />
+    <replace css:content-children="#portal-column-one" css:theme-children="#column-one" />
+    <rules if-content="not(//*[@id='portal-column-one'])">
+      <drop css:theme="#column-one" />
+    </rules>
+    <replace css:content-children="#portal-column-two" css:theme-children="#column-two" />
+    <rules if-content="not(//*[@id='portal-column-two'])">
+      <drop css:theme="#column-two" />
+    </rules>
+    <rules if-content="not(//*[@id='portal-column-two']) and not(//*[@id='portal-column-one'])">
+      <drop attributes="class" css:theme="#main" />
+    </rules>
+
+    <!-- Footer -->
+    <replace css:content-children="#portal-siteactions" css:theme-children="#siteactions" method="raw" />
+    <replace css:content-children="#portal-globalnav" css:theme-children=".coluna-menu ul" />
   </rules>
 </rules>

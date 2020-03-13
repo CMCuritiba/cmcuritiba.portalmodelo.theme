@@ -1,0 +1,463 @@
+/* Very very simple, semantic and human friendly columns */
+
+/* Column size */
+#main         {width: 100%;}
+#main-content {width: auto;}
+#column-one   {width:  20%;}
+#column-two   {width:  20%;}
+
+/* old fashion table layout */
+#main {display: table;}
+#main-content, #column-one, #column-two {display: table-cell; vertical-align: top;}
+
+/* margin collumns */
+#main-content {padding: 0;}
+#column-one {padding-right: 2%;}
+#column-two {padding-left: 2%;}
+#portal-column-content {width: 100%; margin-left: -100%;}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+    #main-content, #column-one, #column-two {display: block; width: 100%; padding: 0;}
+}
+
+/********** Basic styles **********/
+body {
+	background: #fff;
+	color: #333333;
+	font-family: Raleway,sans-serif;
+	margin: 0;
+}
+a:link,
+a:visited,
+#content a:link,
+dl.portlet a:link {
+	color: #333;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: Raleway,sans-serif;
+}
+.state-published {
+  color: #10233b !important;
+}
+a:hover {
+  color: #1a3a64;
+}
+#content a:hover,
+dl.portlet a:hover {
+  color: #1a3a64 !important;
+}
+.clear {
+  clear: both;
+}
+.hiddenStructure {
+  display: none;
+}
+/********** Main container **********/
+#wrapper {
+  padding: 0;
+}
+#main {
+  margin: 0 auto;
+  max-width: 1150px;
+}
+/********** Header **********/
+header {
+  background-color: #fff;
+  background-image: linear-gradient(#fff, #f7f7f7);
+  color: #000;
+  border-bottom: 1px solid #d4d4d4;
+  box-shadow: 0px 6px 5px -4px #88888828;
+  padding-top: 16px;
+}
+header a:link,
+header a:visited {
+  color: #ffffff;
+}
+header a:hover {
+  color: #e6e6e6;
+}
+#header-banner {
+  padding: 0 20px;
+  width: 1150px;
+  margin: 0 auto;
+}
+#header-banner::after {
+  clear: both;
+  display: block;
+  content: "final do header-banner";
+  text-indent: -5000px;
+  font-size: 1px;
+}
+/* Logo */
+#logo {
+  display: flex;
+  float: left;
+  width: 50%;
+}
+#logo img {
+  max-width: 87px;
+  margin-right: 30px;
+}
+#logo h1 {
+  font-size: .7rem;
+  line-height: 2.3rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #333;
+  text-shadow: 2px 2px 2px #e6e6e6;
+  a:link, a:visited {
+  	color: #333;
+  }
+}
+#logo span {
+  display: block;
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+
+#siteactions {
+  text-align: right;
+}
+#siteactions li {
+  display: inline-block;
+  font-size: 80%;
+  margin-left: 10px;
+}
+#siteactions li a:hover {
+  color: #1a3a64;
+  background: #f1f1f1;
+}
+#siteactions li a {
+  color: #333;
+  padding: 2px 5px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+#siteactions li a:before {
+	font-family: "Font Awesome 5 Brands";
+	margin-right: 5px;
+}
+#siteaction-sitemap a:before {
+    content: "\f368";
+}
+#siteaction-accessibility a:before {
+    content: "\f368";
+}
+#siteaction-contact a:before {
+    content: "\f368";
+}
+
+/* search */
+#portal-searchbox {
+  margin-right: 0;
+  text-align: right;
+}
+#portal-searchbox form {
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 25px;
+  width: 300px;
+  padding: 0;
+  float: right;
+}
+#portal-searchbox input.searchField {
+  width: 85%;
+  height: 38px;
+  border: none;
+  background: transparent;
+  padding: 0 10px;
+}
+#portal-searchbox .fa-search {
+  font-size: 1.3rem;
+  margin-right: 10px;
+}
+.searchButton {
+	border: none;
+	background: transparent;
+	padding: 0.4em 0.7em;
+	margin-left: -35px;
+	cursor: pointer;
+	margin-right: 10px;
+}
+
+
+/* Navigation */
+nav {
+  clear: both;
+  color: #333;
+  border-top: 1px solid #d4d4d4;
+  width: 1150px;
+  margin: 0 auto;
+  position: relative;
+}
+nav .abrefecha {
+  cursor: pointer;
+}
+nav .abrefecha i {
+  font-size: 2rem;
+  float: left;
+  margin: 9px 20px 9px 5px;
+  cursor: pointer;
+  width: 28px;
+}
+nav .abrefecha i.fa-times {
+  display: none;
+}
+
+#menu-principal {
+  position: relative;
+  border-bottom: 1px solid #000;
+  border-top: 4px solid #000;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  background: #fff;
+  display: none;
+  border-bottom: 1px solid #d4d4d4;
+  box-shadow: 0px 6px 5px -4px #88888828;
+}
+#menu-principal .icontop {
+  display: block;
+  width: 1150px;
+  margin: 0 auto;
+  font-size: 2rem;
+}
+#menu-principal .icontop i {
+    position: absolute;
+    top: -15px;
+    margin-left: 7px;
+}
+#menu-principal .menu-principal {
+  display: flex;
+  width: 1150px;
+  margin: 0 auto;
+  padding: 20px;
+  list-style: none;
+}
+#menu-principal .menu-principal li {
+  margin-right: 20px;
+  font-weight: bold;
+  width: 20%;
+  border-right: 1px solid #dedede;
+  padding-right: 10px;
+}
+#menu-principal .menu-principal li a {
+  text-decoration: none;
+}
+#menu-principal .menu-principal li ul {
+  list-style: none;
+  padding: 0;
+  font-weight: normal;
+  margin-top: 4px;
+}
+#menu-principal .menu-principal li ul li {
+  font-weight: normal;
+  font-size: 90%;
+  padding: 4px 0;
+  width: 100%;
+  border: none;
+}
+
+nav ul {
+  padding: 0;
+  margin: 14px 0;
+}
+nav li {
+  display: inline-block;
+}
+nav #destaques li a:link {
+  font-size: 80%;
+  text-decoration: none;
+  display: block;
+  padding: 0 1em;
+  border-right: 1px solid #bbb;
+}
+nav #destaques li:last-child a {
+  border: none;
+  padding-right: 0;
+}
+nav li a:link,
+nav li a:visited {
+  color: #333;
+}
+
+/* Mobile Menu button colors */
+
+.menu-button{
+  background: #25528c;
+}
+
+.menu-button button{
+  border-color: white;
+  background: none;
+  color: white;
+}
+
+.menu-button > button:hover {
+  background: #1A3A64 !important;
+}
+
+.menu-button > button.menuAtivo {
+  background: #1A3A64; 
+}
+
+
+#redes-sociais {
+  float: right;
+  font-size: 1.8rem;
+  margin: 5px 5px;
+}
+#redes-sociais li {
+  margin-left: 10px;
+}
+
+
+
+/********** Content **********/
+/* breadcrumb */
+#portal-breadcrumbs {
+  margin: 2em auto;
+  width: 1150px;
+  font-size: 80%;
+  clear: both;
+}
+.section-front-page #portal-breadcrumbs {
+  visibility: hidden;
+}
+
+
+/* text styles */
+p {
+  line-height: 1.4em;
+}
+h1 {
+  color: #1a3a64;
+  border: none;
+  margin-bottom: 0;
+  font-size: 2.5em;
+}
+h2 {
+  color: #1a3a64;
+}
+#content .documentDescription,
+#content #description {
+  color: #4d4d4d;
+  font-weight: normal;
+  margin-bottom: 1em;
+}
+/********** Tiles **********/
+/*********** Portlets ***********/
+/* general styles */
+.portletHeader,
+dl.portlet dt.portletHeader {
+  border-bottom: #d8d8d8 1px solid;
+  font-weight: bold;
+  background: transparent;
+  color: #1a3a64;
+}
+.portletHeader a,
+dl.portlet dt.portletHeader a {
+  color: #1a3a64;
+}
+.portlet {
+  margin-bottom: 2em;
+  padding: 4px 0;
+}
+/* lists inside columns */
+aside dl,
+aside dd,
+aside ul {
+  padding: 0;
+  margin: 0;
+}
+aside a {
+  text-decoration: none;
+}
+/* portlet navigation */
+.portletNavigationTree ul {
+  margin: 0;
+}
+.portletNavigationTree li {
+  list-style-position: inside;
+}
+.portletNavigationTree .navTreeLevel0 > li {
+  border-bottom: #d8d8d8 1px solid;
+  list-style: none;
+}
+.portletNavigationTree a {
+  display: block;
+  padding: 0.3em 0.3em 0.3em 0.5em;
+}
+.portletNavigationTree a:hover {
+  background: #e4e4e4;
+}
+.navTreeLevel2 a {
+  padding-left: 1em;
+}
+.navTreeLevel3 a {
+  padding-left: 2em;
+}
+.navTreeLevel4 a {
+  padding-left: 3em;
+}
+.navTreeLevel5 a {
+  padding-left: 4em;
+}
+.navTreeLevel6 a {
+  padding-left: 5em;
+}
+/********** Footer **********/
+footer {
+  border-top: #d8d8d8 1px solid;
+  margin-top: 2em;
+  padding: 2%;
+  font-size: 80%;
+  background: #1a3a64;
+  color: #ffffff;
+}
+footer a {
+  color: #ffffff !important;
+}
+footer p {
+  margin-bottom: 2em;
+}
+/********* RESPONSIVE **********/
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+  
+}
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+
+  /* Mobile Menu theme color adjustments */
+  #column-one {
+    border-color: #25528C;
+  }
+
+  dl.portlet ul.navTree .navTreeCurrentItem {
+    border-color: #1A3A64
+  }
+
+  dl.portlet ul.navTree li a:hover {
+    border-color: #25528C;
+  }
+  
+}
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  #logo {
+    width: 100%;
+    float: left;
+    text-align: center;
+    clear: both;
+    margin-bottom: 1em;
+  }
+  #portal-searchbox {
+    float: none;
+    text-align: center;
+    clear: both;
+    font-size: 80%;
+  }
+}
