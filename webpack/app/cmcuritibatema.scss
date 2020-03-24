@@ -53,6 +53,9 @@ dl.portlet a:hover {
 .hiddenStructure {
   display: none;
 }
+iframe, img {
+  max-width: 100%;
+}
 /********** Main container **********/
 #wrapper {
   padding: 0;
@@ -60,6 +63,7 @@ dl.portlet a:hover {
 #main {
   margin: 0 auto;
   max-width: 1150px;
+  margin-top: 1rem;
 }
 /********** Header **********/
 header {
@@ -345,8 +349,6 @@ nav li a:visited {
   margin-left: 10px;
 }
 
-
-
 /********** Content **********/
 /* breadcrumb */
 #portal-breadcrumbs {
@@ -356,7 +358,11 @@ nav li a:visited {
   clear: both;
 }
 .section-front-page #portal-breadcrumbs {
-  visibility: hidden;
+  display: none;
+}
+
+.collection-item p {
+    margin-bottom: 0 !important;
 }
 
 
@@ -380,6 +386,36 @@ h2 {
   margin-bottom: 1em;
 }
 /********** Tiles **********/
+.galleria-stage {
+  position: absolute;
+  top: 0;
+  bottom: 60px;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+.galleria-container .galleria-image img {
+  top: 0 !important;
+}
+.width-8 .galleria-container {
+  height: 470px !important;
+}
+.width-8 .galleria-container .galleria-image img {
+  top: 0 !important;
+  object-fit: cover;
+  height: 400px !important;
+}
+.galleria-info-title {
+  font-size: 1.3rem;
+}
+.galleria-thumbnails-container {
+  top: 375px;
+}
+.galleria-info {
+  top: 400px;
+}
+
+
 /*********** Portlets ***********/
 /* general styles */
 .portletHeader,
