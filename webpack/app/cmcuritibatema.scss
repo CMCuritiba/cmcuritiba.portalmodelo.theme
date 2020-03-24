@@ -136,17 +136,29 @@ header a:hover {
   text-decoration: none;
 }
 #siteactions li a:before {
-	font-family: "Font Awesome 5 Brands";
+	font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
 	margin-right: 5px;
 }
 #siteaction-sitemap a:before {
-    content: "\f368";
+  content: "\f0e8";
 }
 #siteaction-accessibility a:before {
-    content: "\f368";
+  content: "\f368";
+  font-family: 'Font Awesome 5 Brands' !important;
+  font-weight: 400 !important;
 }
 #siteaction-contact a:before {
-    content: "\f368";
+  content: "\f0e0";
+}
+#siteaction-contraste a:before {
+  content: "\f042";
+}
+#siteaction-login a:before {
+  content: "\f2f6";
+}
+#siteaction-vlibras a:before {
+  content: "\f25b";
 }
 
 /* search */
@@ -163,7 +175,7 @@ header a:hover {
   float: right;
 }
 #portal-searchbox input.searchField {
-  width: 85%;
+  width: 90%;
   height: 38px;
   border: none;
   background: transparent;
@@ -180,6 +192,25 @@ header a:hover {
 	margin-left: -35px;
 	cursor: pointer;
 	margin-right: 10px;
+}
+.LSBox {
+  position: relative;
+}
+.LSBox:after {
+  font-family: 'Font Awesome 5 Free' !important;
+  font-weight: 900;
+  content: "\f002";
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  font-size: 1.4rem;
+}
+.LSBox input.searchButton {
+  z-index: 1;
+  position: absolute;
+  text-indent: -5000px;
+  height: 40px;
+  width: 34px;
 }
 
 
@@ -263,6 +294,7 @@ nav .abrefecha i.fa-times {
 nav ul {
   padding: 0;
   margin: 14px 0;
+  float: none;
 }
 nav li {
   display: inline-block;
