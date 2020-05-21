@@ -95,6 +95,8 @@
 
     <!-- Footer -->
     <replace css:content-children="#portal-siteactions" css:theme-children="#siteactions" method="raw" />
+    <drop css:content="#portal-siteactions" />
     <replace css:content-children="#portal-globalnav" css:theme-children=".coluna-menu ul" />
+    <replace css:content-children="#portal-footer-wrapper" css:theme-children="#footer-total" />
   </rules>
 </rules>

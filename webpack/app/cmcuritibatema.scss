@@ -97,7 +97,7 @@ header a:hover {
 #logo {
   display: flex;
   float: left;
-  width: 50%;
+  width: 40%;
 }
 #logo img {
   max-width: 87px;
@@ -247,7 +247,7 @@ nav .abrefecha i.fa-times {
   border-top: 4px solid #000;
   position: absolute;
   width: 100%;
-  z-index: 1;
+  z-index: 12;
   background: #fff;
   display: none;
   border-bottom: 1px solid #d4d4d4;
@@ -295,6 +295,12 @@ nav .abrefecha i.fa-times {
   padding: 4px 0;
   width: 100%;
   border: none;
+  display: block;
+  margin-bottom: 0;
+}
+#menu-principal .menu-principal li ul li li {
+    padding-left: 5px;
+    border-left: 1px solid #ccc;
 }
 
 nav ul {
@@ -319,6 +325,13 @@ nav #destaques li:last-child a {
 nav li a:link,
 nav li a:visited {
   color: #333;
+}
+
+ul.submenu {
+  display: block !important;
+  left: auto !important;
+  position: relative !important;
+  top: auto !important;
 }
 
 /* Mobile Menu button colors */
@@ -362,15 +375,13 @@ nav li a:visited {
 .section-front-page #portal-breadcrumbs {
   display: none;
 }
-
 .collection-item p {
     margin-bottom: 0 !important;
 }
 
-
 /* text styles */
 p {
-  line-height: 1.4em;
+  line-height: 1.6em;
 }
 h1 {
   color: #1a3a64;
@@ -381,13 +392,52 @@ h1 {
 h2 {
   color: #1a3a64;
 }
+#content h1.documentFirstHeading {
+    margin-top: 0;
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
 #content .documentDescription,
 #content #description {
   color: #4d4d4d;
   font-weight: normal;
   margin-bottom: 1em;
 }
+#content {
+  line-height: 1.6em;
+  font-size: 100%;
+}
+#content .newsImageContainer .discreet {
+  font-size: 60%;
+}
+#content .documentDescription, #content #description {
+    font-weight: bold;
+}
+
+/********** NEWS ***********/
+#content div.newsImageContainer {
+    float: none;
+    margin: 0 0 1em 0;
+}
+
+#content div.newsImageContainer img {
+    width: 100% !important;
+    height: auto;
+}
+#content div.newsImageContainer p.discreet {
+    margin: 0;
+    padding: 0.5rem 0;
+    background-color: #fff;
+    color: #000;
+    width: 100%;
+    top: 0em;
+}
+
 /********** Tiles **********/
+#main-content .tile {
+  margin-bottom: 1.5em;
+}
 .galleria-stage {
   position: absolute;
   top: 0;
@@ -411,10 +461,22 @@ h2 {
   font-size: 1.3rem;
 }
 .galleria-thumbnails-container {
-  top: 375px;
+  bottom: 0;
+  height: 15px;
+  z-index: 3;
 }
 .galleria-info {
-  top: 400px;
+  bottom: 10px;
+  background: #fff;
+}
+.galleria-info-description {
+    font: normal 13px/1.4 Raleway,sans-serif;
+    margin: 0;
+    color: #000;
+}
+/* tile de banner */
+.cover-banner-tile {
+  display: block;
 }
 
 
@@ -493,6 +555,27 @@ footer a {
 footer p {
   margin-bottom: 2em;
 }
+footer div.cell {
+  float: none;
+}
+#portal-footer {
+  background: transparent;
+  font-size: 100%;
+}
+#footer-total .row {
+  float: none;
+}
+#portal-footer li, footer li {
+    padding-bottom: inherit;
+}
+.colophon-item {
+    margin-bottom: 30px;
+}
+.colophon-info {
+    font-size: .8rem;
+    margin-top: 10px;
+}
+
 /********* RESPONSIVE **********/
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
