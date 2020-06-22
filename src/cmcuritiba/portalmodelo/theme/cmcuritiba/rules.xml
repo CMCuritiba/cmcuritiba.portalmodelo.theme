@@ -30,6 +30,7 @@
 
     <!-- logo -->
     <copy css:content="#portal-logo" css:theme="#logo a" attributes="href title accesskey" />
+    <replace css:content="#portal-logo img" css:theme="#logo a img" />
 
     <!-- Header -->
     <replace css:content="#portal-header p" css:theme="#skip-menu" />
