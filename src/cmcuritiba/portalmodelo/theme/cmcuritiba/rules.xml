@@ -51,6 +51,10 @@
     <copy css:content=".relatedItems" css:theme=".conteudo-relacionado" method="raw" />
     <drop css:content="#content .relatedItems" />
 
+    <rules css:if-not-content=".portaltype-news-item">
+      <drop css:theme="#aviso-legal" />
+    </rules>
+
 
     <!-- UL DE LíNGUAS
     É necessário cadastrar uma action em site_actions com o mesmo id de
