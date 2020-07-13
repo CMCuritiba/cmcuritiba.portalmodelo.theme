@@ -87,6 +87,12 @@
     <replace css:content-children=".coluna-redes" css:theme-children=".coluna-redes" />
     <append css:theme="body" css:content="#plone-analytics" />
 
+    <replace css:content="#viewlet-below-content-body .visualClear">
+      <div id="aviso-legal">
+            <p>Reprodução do texto autorizada mediante citação da Câmara Municipal de Curitiba</p>
+        </div>
+    </replace>
+
     <!-- Columns -->
     <replace css:content-children="#portal-column-content" css:theme-children="#main-content" />
     <replace css:content-children="#portal-column-one" css:theme-children="#column-one" />

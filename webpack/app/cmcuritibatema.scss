@@ -565,6 +565,14 @@ aside ul {
 aside a {
   text-decoration: none;
 }
+
+#viewlet-below-content-body {
+  order: 6;
+}
+#aviso-legal {
+  font-weight: bold;
+  font-style: italic;
+}
 /* portlet navigation */
 .portletNavigationTree ul {
   margin: 0;
