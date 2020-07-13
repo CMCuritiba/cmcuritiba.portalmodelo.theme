@@ -53,7 +53,10 @@
 
     <rules css:if-not-content=".portaltype-news-item">
       <drop css:theme="#aviso-legal" />
+      <drop css:theme=".elf-noticias" />
     </rules>
+
+    <strip css:content=".newsImageContainer a" />
 
 
     <!-- UL DE LíNGUAS
