@@ -51,11 +51,6 @@
     <copy css:content=".relatedItems" css:theme=".conteudo-relacionado" method="raw" />
     <drop css:content="#content .relatedItems" />
 
-    <rules css:if-not-content=".portaltype-news-item">
-      <drop css:theme="#aviso-legal" />
-      <drop css:theme=".elf-noticias" />
-    </rules>
-
     <strip css:content=".newsImageContainer a" />
 
 
@@ -87,11 +82,17 @@
     <replace css:content-children=".coluna-redes" css:theme-children=".coluna-redes" />
     <append css:theme="body" css:content="#plone-analytics" />
 
-    <replace css:content="#viewlet-below-content-body .visualClear">
-      <div id="aviso-legal">
-            <p>Reprodução do texto autorizada mediante citação da Câmara Municipal de Curitiba</p>
-        </div>
-    </replace>
+    <rules css:if-content="body.portaltype-news-item">
+      <replace css:content="#viewlet-below-content-body .visualClear">
+        <div id="aviso-legal">
+              <p>Reprodução do texto autorizada mediante citação da Câmara Municipal de Curitiba</p>
+          </div>
+      </replace>
+    </rules>
+
+    <rules css:if-not-content="body.portaltype-news-item">
+      <drop css:theme=".elf-noticias" />
+    </rules>
 
     <!-- Columns -->
     <replace css:content-children="#portal-column-content" css:theme-children="#main-content" />

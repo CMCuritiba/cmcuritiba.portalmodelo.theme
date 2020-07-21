@@ -644,9 +644,12 @@ footer div.cell {
 }
 
 /********* RESPONSIVE **********/
-/* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 979px) {
-  
+/* only desktop */
+@media (min-width: 768px) {
+  .eapps-social-share-buttons-container {
+    max-width: 80%;
+    margin: 0 auto;
+  }
 }
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
