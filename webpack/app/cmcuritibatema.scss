@@ -36,12 +36,13 @@ dl.portlet a:link {
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family: Raleway,sans-serif;
+  line-height: 1.2em;
 }
 h3 {
-  font-size: 1.1em;
+  font-size: 1.4em;
 }
 h4 {
-    font-size: 1em;
+    font-size: 1.2em;
 }
 .state-published {
   color: #10233b !important;
@@ -476,6 +477,9 @@ dd.image-caption {
 #main-content .tile {
   margin-bottom: 1.5em;
 }
+.tile-header {
+  margin-bottom: 12px;
+}
 .galleria-stage {
   position: absolute;
   top: 0;
@@ -521,9 +525,6 @@ dd.image-caption {
   margin-bottom: 10px;
 }
 
-.cover-collection-tile h2 {
-  font-size: 2px;
-}
 .cover-richtext-tile h3 {
   font-size: 1em;
 }
@@ -665,6 +666,10 @@ footer div.cell {
 
   nav {
     max-width: 100%;
+  }
+
+  ul.submenu {
+    display: none !important;
   }
 
   #menu-principal .menu-principal {
