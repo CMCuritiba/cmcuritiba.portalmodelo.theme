@@ -6,19 +6,21 @@
 #column-one   {width:  20%;}
 #column-two   {width:  20%;}
 
-/* old fashion table layout */
-#main {display: table;}
-#main-content, #column-one, #column-two {display: table-cell; vertical-align: top;}
 
-/* margin collumns */
-#main-content {padding: 0;}
+#main {display: flex;}
+#main-content, #column-one, #column-two {}
+
+
+#main-content {padding: 0; width: 920px; max-width: 100%;}
+.portaltype-collective-cover-content #main-content {width: 100%;}
 #column-one {padding-right: 2%;}
 #column-two {padding-left: 2%;}
 #portal-column-content {width: 100%; margin-left: -100%;}
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
-    #main-content, #column-one, #column-two {display: block; width: 100%; padding: 0;}
+  #main {display: table;}
+  #main-content, #column-one, #column-two {display: table-row; width: 100%; padding: 0;}
 }
 
 /********** Basic styles **********/
@@ -29,10 +31,14 @@ body {
 	margin: 0;
 }
 a:link,
-a:visited,
-#content a:link,
-dl.portlet a:link {
+a:visited {
 	color: #333;
+}
+#content #content-core a:link,
+#content #content-core a:hover,
+#content #content-core a:visited {
+  color: #205c90;
+  text-decoration: underline;
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family: Raleway,sans-serif;
@@ -63,6 +69,9 @@ dl.portlet a:hover {
 iframe, img {
   max-width: 100%;
 }
+img {
+  height: auto;
+}
 /********** Main container **********/
 #wrapper {
   padding: 0;
@@ -86,7 +95,7 @@ header a:visited {
   color: #ffffff;
 }
 header a:hover {
-  color: #e6e6e6;
+  color: #333;
 }
 #header-banner {
   padding: 0 3%;
@@ -162,7 +171,8 @@ header a:hover {
   font-family: 'Font Awesome 5 Brands' !important;
   font-weight: 400 !important;
 }
-#siteaction-contact a:before {
+#siteaction-contact a:before,
+#siteaction-contato a:before {
   content: "\f0e0";
 }
 #siteaction-contraste a:before {
@@ -250,7 +260,13 @@ nav .abrefecha i {
 nav .abrefecha i.fa-times {
   display: none;
 }
-
+.menu-title {
+  display: inline-block;
+  font-weight: bold;
+  float: left;
+  padding: 16px 0;
+  margin-right: 25px;
+}
 #menu-principal {
   position: relative;
   border-bottom: 1px solid #000;
@@ -315,7 +331,7 @@ nav .abrefecha i.fa-times {
 
 nav ul {
   padding: 0;
-  margin: 14px 0;
+  margin: 16px 0;
   float: none;
 }
 nav li {
@@ -355,15 +371,6 @@ ul.submenu {
   background: none;
   color: white;
 }
-
-.menu-button > button:hover {
-  background: #1A3A64 !important;
-}
-
-.menu-button > button.menuAtivo {
-  background: #1A3A64; 
-}
-
 
 #redes-sociais {
   float: right;
@@ -455,11 +462,22 @@ h2 {
     background-color: #fff;
     color: #000;
     width: 100%;
+    max-width: 100%;
     top: 0em;
     font-size: 12px;
 }
+
+dl.image-left.captioned,
+dl.image-inline.captioned,
+dl.image-right.captioned    {
+  max-width: 100% !important;
+}
 dd.image-caption {
+  max-width: 99% !important;
   margin: 0 !important;
+}
+dl.image-inline.captioned dd.image-caption {
+  width: 100% !important;
 }
 .sociallike-network-facebook,
 .sociallike-network-pinterest,
@@ -472,6 +490,18 @@ dd.image-caption {
     max-width: 1150px;
     margin-top: 1rem;
 }
+
+#content-core .tileItem .documentByLine {
+  font-size: 14px;
+  color: #383838;
+}
+#content-core .tileItem .documentByLine span:first-child {
+  display: none;
+}
+#content-core .tileFooter {
+  display: none;
+}
+
 
 /********** Tiles **********/
 #main-content .tile {
@@ -500,12 +530,20 @@ dd.image-caption {
   height: 400px !important;
 }
 .galleria-info-title {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
+
+.cell.width-8 .galleria-info-title {
+  font-size: 1.9rem;
+}
+
 .galleria-thumbnails-container {
   bottom: 0;
   height: 20px;
   z-index: 3;
+}
+.galleria-info-text {
+    padding: 12px 0;
 }
 .galleria-info {
   bottom: 10px;
@@ -539,6 +577,9 @@ dd.image-caption {
   margin-left: 140px;
 }
 
+.tile .cover-list-tile img.right {
+    margin: 0 0 0.5em 0;
+}
 
 /*********** Portlets ***********/
 /* general styles */
@@ -651,6 +692,23 @@ footer div.cell {
     max-width: 80%;
     margin: 0 auto;
   }
+  #portal-colophon {
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+  }
+  .colophon-item {
+    margin-bottom: 60px;
+    width: 40%;
+  }
+  #portal-colophon .colophon-item:first-child {
+    text-align: right;
+  }
+  dl.image-left.captioned,
+  dl.image-inline.captioned,
+  dl.image-right.captioned    {
+    max-width: 900px !important;
+  }
 }
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
@@ -670,6 +728,16 @@ footer div.cell {
 
   ul.submenu {
     display: none !important;
+  }
+  .menu-title {
+    display: none;
+  }
+  #main, #content-core {
+    width: 100%;
+  }
+  #main {
+    margin-right: 0 !important;
+    table-layout: fixed;
   }
 
   #menu-principal .menu-principal {
@@ -697,6 +765,17 @@ footer div.cell {
 
   dl.portlet ul.navTree li a:hover {
     border-color: #25528C;
+  }
+  .eapps-social-share-buttons-mobile-layout .eapps-social-share-buttons-container {
+    left: 60px !important;
+    right: 60px !important;
+  }
+  dl.image-left.captioned,
+  dl.image-inline.captioned,
+  dl.image-right.captioned    {
+    float: none;
+    margin: 0;
+    padding: 0;
   }
   
 }
