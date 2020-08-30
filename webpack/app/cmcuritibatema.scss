@@ -12,7 +12,8 @@
 
 
 #main-content {padding: 0; width: 920px; max-width: 100%;}
-.portaltype-collective-cover-content #main-content {width: 100%;}
+.portaltype-collective-cover-content #main-content,
+.portaltype-window  #main-content {width: 100%;}
 #column-one {padding-right: 2%;}
 #column-two {padding-left: 2%;}
 #portal-column-content {width: 100%; margin-left: -100%;}
