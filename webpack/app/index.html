@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>IDG 2.0</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -9,28 +10,29 @@
     <link href="<%= htmlWebpackPlugin.options.publicPath %>all.css" rel="stylesheet">
     <script type="text/javascript" src="<%= htmlWebpackPlugin.options.publicPath %>rybena.js"></script>
     <script>
-    $(document).ready(function(){
-      $(".abrefecha").click(function(){
-        $("#menu-principal").toggle();
-        $(".fa-bars").toggle();
-        $(".fa-times").toggle();
-      });
-    });
+        $(document).ready(function () {
+            $(".abrefecha").click(function () {
+                $("#menu-principal").toggle();
+                $(".fa-bars").toggle();
+                $(".fa-times").toggle();
+            });
+        });
     </script>
-  </head>
-  <body>
-      <div id="wrapper">
+</head>
+
+<body>
+    <div id="wrapper">
         <ul id="skip-menu">
-          <li><a accesskey="1" href="#content">Ir para o conteúdo</a></li>
-          <li><a accesskey="2" href="#main-navigation">Ir para o menu</a></li>
-          <li><a accesskey="3" href="#portal-searchbox">Ir para a busca</a></li>
-          <li><a accesskey="4" href="#portal-footer">Ir para o rodapé</a></li>
+            <li><a accesskey="1" href="#content">Ir para o conteúdo</a></li>
+            <li><a accesskey="2" href="#main-navigation">Ir para o menu</a></li>
+            <li><a accesskey="3" href="#portal-searchbox">Ir para a busca</a></li>
+            <li><a accesskey="4" href="#portal-footer">Ir para o rodapé</a></li>
         </ul>
         <!-- User -->
         <div id="user">
-          <ul>
-            <li><a href="#" title="Login">Login</a></li>
-          </ul>
+            <ul>
+                <li><a href="#" title="Login">Login</a></li>
+            </ul>
         </div>
         <!-- Header -->
         <header role="banner">
@@ -42,7 +44,8 @@
                     </a>
                     <h1>
                         <a href="#" title="#">
-                            Câmara Municipal de <span>Curitiba</span>
+                            <span>Câmara</span>
+                            <span id="linha2">de Curitiba</span>
                         </a>
                     </h1>
                 </div>
@@ -70,73 +73,77 @@
 
                 <div id="portal-searchbox">
 
-                <form id="searchGadget_form" action="/@@busca">
+                    <form id="searchGadget_form" action="/@@busca">
 
-                    <fieldset class="LSBox">
-                        <legend class="hiddenStructure">Buscar no portal</legend>
-                        <label class="hiddenStructure" for="searchGadget">Buscar no portal</label>
+                        <fieldset class="LSBox">
+                            <legend class="hiddenStructure">Buscar no portal</legend>
+                            <label class="hiddenStructure" for="searchGadget">Buscar no portal</label>
 
-                        <input name="SearchableText" type="text" size="18" title="Buscar no portal" placeholder="Buscar no portal" class="searchField" id="searchGadget">
+                            <input name="SearchableText" type="text" size="18" title="Buscar no portal"
+                                placeholder="Buscar no portal" class="searchField" id="searchGadget">
 
-                        <i class="fas fa-search" aria-hidden="true"></i>
+                            <i class="fas fa-search" aria-hidden="true"></i>
 
-                    </fieldset>
+                        </fieldset>
 
-                <input name="_authenticator" type="hidden" value="83e499fa733d5b1db9f137be78d214d65ae2ff62"></form>
+                        <input name="_authenticator" type="hidden" value="83e499fa733d5b1db9f137be78d214d65ae2ff62">
+                    </form>
+
+
+                </div>
 
 
             </div>
 
-
-            </div>
-
-                    <!-- Main Menu -->
+            <!-- Main Menu -->
 
 
-                <nav id="main-navigation" role="navigation">
-                    <a class="abrefecha">
-                        <i class="fas fa-bars" aria-hidden="true"></i>
-                        <i class="fas fa-times" aria-hidden="true"></i>
-                        <span class="menu-title">Menu</span>
-                    </a>
+            <nav id="main-navigation" role="navigation">
+                <a class="abrefecha">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                    <span class="menu-title">Menu</span>
+                </a>
 
-                    <ul id="redes-sociais">
-                        <li>
-                            <a href="https://www.facebook.com/CamaraCuritiba/">
-                                <i class="fab fa-facebook-square" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/CamaraCuritiba">
-                                <i class="fab fa-twitter-square" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/camaradecuritiba/">
-                                <i class="fab fa-instagram" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.youtube.com/camaramunicipaldecuritiba">
-                                <i class="fab fa-youtube" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.flickr.com/photos/camaracuritiba/">
-                                <i class="fab fa-flickr" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://open.spotify.com/show/77uZ6a7lpDGWPnyMy2ABCo">
-                                <i class="fab fa-spotify" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul id="destaques">
-                        <li><a href="https://pm3.cmc.pr.gov.br/institucional/fale-com-a-camara" title="Entre em contato">Entre em contato</a></li>
-                        <li><a href="https://www.cmc.pr.gov.br/portaltransparencia/" title="Portal da Transparência">Portal da Transparência</a></li>
-                    </ul>
-                </nav>
+                <ul id="redes-sociais">
+                    <li>
+                        <a href="https://www.facebook.com/CamaraCuritiba/">
+                            <i class="fab fa-facebook-square" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/CamaraCuritiba">
+                            <i class="fab fa-twitter-square" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/camaradecuritiba/">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/camaramunicipaldecuritiba">
+                            <i class="fab fa-youtube" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.flickr.com/photos/camaracuritiba/">
+                            <i class="fab fa-flickr" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://open.spotify.com/show/77uZ6a7lpDGWPnyMy2ABCo">
+                            <i class="fab fa-spotify" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+                <ul id="destaques">
+                    <li><a href="https://pm3.cmc.pr.gov.br/institucional/fale-com-a-camara"
+                            title="Entre em contato">Entre em contato</a></li>
+                    <li><a href="https://www.cmc.pr.gov.br/portaltransparencia/" title="Portal da Transparência">Portal
+                            da Transparência</a></li>
+                </ul>
+            </nav>
         </header>
 
         <div id="menu-principal">
@@ -145,22 +152,23 @@
                 <li>
                     <a href="#">A Câmara de Curitiba</a>
                     <ul>
-                      <li><a title="Funcionamento">Funcionamento</a></li>
-                      <li><a title="Visite a Câmara">Visite a Câmara</a></li>
-                      <li><a title="Mesa/Corregedoria">Mesa/Corregedoria</a></li>
-                      <li><a title="Lideranças">Lideranças</a></li>
-                      <li><a title="Organograma">Organograma</a></li>
-                      <li><a title="Símbolos de Curitiba">Símbolos de Curitiba</a></li>
-                      <li><a title="Nossa Memória : um pouco da História da Câmara Municipal de Curitiba">Nossa Memória</a></li>
+                        <li><a title="Funcionamento">Funcionamento</a></li>
+                        <li><a title="Visite a Câmara">Visite a Câmara</a></li>
+                        <li><a title="Mesa/Corregedoria">Mesa/Corregedoria</a></li>
+                        <li><a title="Lideranças">Lideranças</a></li>
+                        <li><a title="Organograma">Organograma</a></li>
+                        <li><a title="Símbolos de Curitiba">Símbolos de Curitiba</a></li>
+                        <li><a title="Nossa Memória : um pouco da História da Câmara Municipal de Curitiba">Nossa
+                                Memória</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="#">Vereadores</a>
                     <ul>
-                      <li><a>Dados e contato</a></li>
-                      <li><a>Fotos</a></li>
-                      <li><a>Lista de Presença</a></li>
-                      <li><a>Lista de Presença até 2012</a></li>
+                        <li><a>Dados e contato</a></li>
+                        <li><a>Fotos</a></li>
+                        <li><a>Lista de Presença</a></li>
+                        <li><a>Lista de Presença até 2012</a></li>
                     </ul>
                 </li>
                 <li>
@@ -204,138 +212,152 @@
             </ul>
         </div>
 
-    <div id="portal-breadcrumbs" class="inverter">
+        <div id="portal-breadcrumbs" class="inverter">
 
-        <span id="breadcrumbs-you-are-here">Você está aqui:</span>
-        <span id="breadcrumbs-home">
-            <a href="http://45.32.162.149">Página Inicial</a>
-            <span class="breadcrumbSeparator">
-                /
+            <span id="breadcrumbs-you-are-here">Você está aqui:</span>
+            <span id="breadcrumbs-home">
+                <a href="http://45.32.162.149">Página Inicial</a>
+                <span class="breadcrumbSeparator">
+                    /
+                </span>
             </span>
-        </span>
-        <span id="breadcrumbs-1" dir="ltr">
+            <span id="breadcrumbs-1" dir="ltr">
                 <a href="http://45.32.162.149/faq">Pagina 1</a>
                 <span class="breadcrumbSeparator">
                     /
                 </span>
-        </span>
-        <span id="breadcrumbs-2" dir="ltr">
+            </span>
+            <span id="breadcrumbs-2" dir="ltr">
                 <a href="http://45.32.162.149/faq/trabalhador">Pagina 2</a>
                 <span class="breadcrumbSeparator">
-                 /
+                    /
                 </span>
-        </span>
-        <span id="breadcrumbs-3" dir="ltr">
+            </span>
+            <span id="breadcrumbs-3" dir="ltr">
                 <span id="breadcrumbs-current">Página 3</span>
-        </span>
-    </div>
+            </span>
+        </div>
 
 
-    <div class="video"></div>
+        <div class="video"></div>
 
 
-    <div id="wrapper">
+        <div id="wrapper">
 
 
-      <!-- Columns -->
+            <!-- Columns -->
 
 
-      <div id="main" class="has-portlets">
-        <aside id="column-one">
-          <div class="visualPadding">
-            <div class="portlet">Coluna 1</div>
-          </div>
-        </aside>
+            <div id="main" class="has-portlets">
+                <aside id="column-one">
+                    <div class="visualPadding">
+                        <div class="portlet">Coluna 1</div>
+                    </div>
+                </aside>
 
-        <main id="main-content" role="main">
-          <div>
-            <p class="section">Nome da seção</p>
-            <h1>Tema básico para a nova versão do Portal Padrão IDG 2.0</h1>
-            <div property="rnews:description" class="documentDescription">Novo tema para a versão 2.0 da Identidade Digital do Governo Federal. O novo tema é muito mais simples e fácil de customizar</div>
-            <div class="documentByLine" id="plone-document-byline">
+                <main id="main-content" role="main">
+                    <div>
+                        <p class="section">Nome da seção</p>
+                        <h1>Tema básico para a nova versão do Portal Padrão IDG 2.0</h1>
+                        <div property="rnews:description" class="documentDescription">Novo tema para a versão 2.0 da
+                            Identidade Digital do Governo Federal. O novo tema é muito mais simples e fácil de
+                            customizar</div>
+                        <div class="documentByLine" id="plone-document-byline">
 
-                <span class="documentAuthor">
-                  por Governo do Brasil
-                     —
-                </span>
+                            <span class="documentAuthor">
+                                por Governo do Brasil
+                                —
+                            </span>
 
-              <span class="documentModified">
-                <span>última modificação</span>
-                <span property="rnews:dateModified">20/11/2017 15h29</span>
-              </span>
+                            <span class="documentModified">
+                                <span>última modificação</span>
+                                <span property="rnews:dateModified">20/11/2017 15h29</span>
+                            </span>
 
-              <span class="contentHistory" id="content-history">
-                —
-                <a href="http://45.32.162.149/noticias/as-vantagens-da-modernizacao-regulamentacao-direitos-preservados-e-mais-seguranca-para-todos/@@historyview" rel="#pb_4" class="link-overlay" style="cursor: pointer;">Histórico</a>
-              </span>
+                            <span class="contentHistory" id="content-history">
+                                —
+                                <a href="http://45.32.162.149/noticias/as-vantagens-da-modernizacao-regulamentacao-direitos-preservados-e-mais-seguranca-para-todos/@@historyview"
+                                    rel="#pb_4" class="link-overlay" style="cursor: pointer;">Histórico</a>
+                            </span>
 
+                        </div>
+                        <p>Este é um tema muito simples e enxuto para o <a href="#">Plone</a> para ser utilizado nas
+                            instalações padrão da Identidade Digital do Governo Federal. </p>
+                        <h2>HTML</h2>
+                        <p>Ao invez de utilizar diversos divs o tema utiliza várias tags padrão do HTML 5</p>
+                        <h2>Styles</h2>
+                        <p>Todos os estilos são definidos em um arquivo SCSS único, comum para todos os temas
+                            existentes. Cada tema possui apenas um simples arquivo de configuração de váriaveis, que
+                            altera toda a aparencia do portal.</p>
+                        <h3>Grid</h3>
+                        <p>Este tema utiliza FLEX para a criação de grids extremamente simples em lugares como
+                            cabeçalho, footer e nas colunas principais.</p>
+                        <p>Alem disso este tema implementa os estilos grid básico do Bootstrap 3.0, permitindo a
+                            utilização do portal com 12 colunas ao invez do tradicional grid de 16 colunas do Plone </p>
+
+                        <h3>Responsivo?</h3>
+                        <p>Sim</p>
+                        <h2>Estilos básicos para formatação</h2>
+                        <h1>h1. Heading 1</h1>
+                        <h2>h2. Heading 2</h2>
+                        <h3>h3. Heading 3</h3>
+                        <h4>h4. Heading 4</h4>
+                        <h5>h5. Heading 5</h5>
+                        <h6>h6. Heading 6</h6>
+                    </div>
+                </main>
+                <aside id="column-two">
+                    <div class="visualPadding">
+                        <div class="portlet">Coluna 2</div>
+                    </div>
+                </aside>
             </div>
-            <p>Este é um tema muito simples e enxuto para o <a href="#">Plone</a> para ser utilizado nas instalações padrão da Identidade Digital do Governo Federal. </p>
-            <h2>HTML</h2>
-            <p>Ao invez de utilizar diversos divs o tema utiliza várias tags padrão do HTML 5</p>
-            <h2>Styles</h2>
-            <p>Todos os estilos são definidos em um arquivo SCSS único, comum para todos os temas existentes. Cada tema possui apenas um simples arquivo de configuração de váriaveis, que altera toda a aparencia do portal.</p>
-            <h3>Grid</h3>
-            <p>Este tema utiliza FLEX para a criação de grids extremamente simples em lugares como cabeçalho, footer e nas colunas principais.</p>
-            <p>Alem disso este tema implementa os estilos grid básico do Bootstrap 3.0, permitindo a utilização do portal com 12 colunas ao invez do tradicional grid de 16 colunas do Plone </p>
+            <div class="conteudo-relacionado"></div>
 
-            <h3>Responsivo?</h3>
-            <p>Sim</p>
-            <h2>Estilos básicos para formatação</h2>
-            <h1>h1. Heading 1</h1>
-            <h2>h2. Heading 2</h2>
-            <h3>h3. Heading 3</h3>
-            <h4>h4. Heading 4</h4>
-            <h5>h5. Heading 5</h5>
-            <h6>h6. Heading 6</h6>
-          </div>
-        </main>
-        <aside id="column-two">
-            <div class="visualPadding">
-                <div class="portlet">Coluna 2</div>
+
+            <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+            <div class="elfsight-app-5bbce581-8991-42a7-85c4-f1823b97fda6"></div>
+
+            <footer role="contentinfo" id="footer-total">
+                <p id="footer-info">
+                    Este legislativo municipal oferece através de seu site uma visão geral dos trabalhos realizados em
+                    prol da cidade de Curitiba. Acompanhe nesta ferramenta o trabalho dos vereadores, a execução do
+                    orçamento, e tenha acesso a diversas informações institucionais e de funcionamento. Nosso objetivo
+                    maior é o de dar transparência aos trabalhos aqui realizados. Lembramos que este site está em
+                    constante atualização e melhoria. Sua visita frequente é muito importante.
+                </p>
+                <p>
+
+                    © 1997 - 2020 - Câmara Municipal de Curitiba - todos os direitos reservados
+                </p>
+                <p>
+                    Câmara Municipal de Curitiba - Rua Barão do Rio Branco, 720 - Curitiba - Paraná - Brasil - CEP:
+                    80010-902<br>
+                    Fone: (41) 3350-4500 - Fax: (41) 3350-4737 - Email geral: camara@cmc.pr.gov.br
+                </p>
+
+            </footer>
+
+            <div class="elf-noticias">
+                <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+                <div class="elfsight-app-870b2e69-38cd-4678-aeda-e22d68cf2b54"></div>
             </div>
-        </aside>
-      </div>
-      <div class="conteudo-relacionado"></div>
 
-
-    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-    <div class="elfsight-app-5bbce581-8991-42a7-85c4-f1823b97fda6"></div>
-
-    <footer role="contentinfo" id="footer-total">
-        <p id="footer-info">
-            Este legislativo municipal oferece através de seu site uma visão geral dos trabalhos realizados em prol da cidade de Curitiba. Acompanhe nesta ferramenta o trabalho dos vereadores, a execução do orçamento, e tenha acesso a diversas informações institucionais e de funcionamento. Nosso objetivo maior é o de dar transparência aos trabalhos aqui realizados. Lembramos que este site está em constante atualização e melhoria. Sua visita frequente é muito importante.
-        </p>
-        <p>
-
-            © 1997 - 2020 - Câmara Municipal de Curitiba - todos os direitos reservados
-        </p>
-        <p>
-            Câmara Municipal de Curitiba - Rua Barão do Rio Branco, 720 - Curitiba - Paraná - Brasil - CEP: 80010-902<br>
-            Fone: (41) 3350-4500 - Fax: (41) 3350-4737 - Email geral: camara@cmc.pr.gov.br
-        </p>
-
-    </footer>
-
-    <div class="elf-noticias">
-        <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-        <div class="elfsight-app-870b2e69-38cd-4678-aeda-e22d68cf2b54"></div>
+        </div>
+        <div id="barra_brasil_js"></div>
+        <script>
+            function onYouTubeIframeAPIReady() {
+                $(function () {
+                    var $container = $('.portaltype-liveblog.template-view .linha-destaquetopo');
+                    if ($container.length === 0) {
+                        return;
+                    }
+                    var by = new brasilgovtemas.Youtube($container);
+                    by.iframeIsReady();
+                });
+            }
+        </script>
     </div>
+</body>
 
-    </div>
-    <div id="barra_brasil_js"></div>
-    <script>
-      function onYouTubeIframeAPIReady() {
-        $(function() {
-          var $container = $('.portaltype-liveblog.template-view .linha-destaquetopo');
-          if ($container.length === 0) {
-            return;
-          }
-          var by = new brasilgovtemas.Youtube($container);
-          by.iframeIsReady();
-        });
-      }
-    </script>
-  </div>
-  </body>
 </html>
