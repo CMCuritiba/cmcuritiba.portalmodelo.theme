@@ -7,8 +7,9 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <link rel="icon" type="image/png" href="img/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700,900&amp;display=swap" rel="stylesheet">
-    <link href="++theme++cmcuritiba/all.css" rel="stylesheet">
-    <script type="text/javascript" src="++theme++cmcuritiba/rybena.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700,900&amp;display=swap" rel="stylesheet">
+    <link href="all.css" rel="stylesheet">
+    <script type="text/javascript" src="rybena.js"></script>
     <script>
         $(document).ready(function () {
             $(".abrefecha").click(function () {
@@ -18,11 +19,11 @@
             });
         });
     </script>
-    <link href="++theme++cmcuritiba/cmcuritibatema-6659b06.css" rel="stylesheet">
-</head>
-
 <body>
     <div id="wrapper">
+  <link href="cmcuritibatema.scss" rel="stylesheet"></head>
+  <body>
+      <div id="wrapper">
         <ul id="skip-menu">
             <li><a accesskey="1" href="#content">Ir para o conteúdo</a></li>
             <li><a accesskey="2" href="#main-navigation">Ir para o menu</a></li>
@@ -41,7 +42,7 @@
 
                 <div id="logo">
                     <a href="#" title="#">
-                        <img src="img/logo.png" alt="Portal name">
+                        <img src="img/logo2.png" alt="Portal name">
                     </a>
                     <h1>
                         <a href="#" title="#">
@@ -361,5 +362,20 @@
     </div>
     <script type="text/javascript" src="++theme++cmcuritiba/cmcuritibatema-6659b06.js"></script>
 </body>
-
+    </div>
+    <div id="barra_brasil_js"></div>
+    <script>
+      function onYouTubeIframeAPIReady() {
+        $(function() {
+          var $container = $('.portaltype-liveblog.template-view .linha-destaquetopo');
+          if ($container.length === 0) {
+            return;
+          }
+          var by = new brasilgovtemas.Youtube($container);
+          by.iframeIsReady();
+        });
+      }
+    </script>
+  </div>
+  <script type="text/javascript" src="cmcuritibatema.js"></script></body>
 </html>
